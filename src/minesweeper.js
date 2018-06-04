@@ -16,9 +16,9 @@ const generateBombBoard = (rows, cols, bombs) => {
         let row = [];
         for (let j = 0; j < cols < 9; j++) {
             row.push(null); 
-        }  
-        board.push(row);      
+        }        
     }
+    board.push(row);
     return board;
 };
     let numberOfBombsPlaced = 0;
