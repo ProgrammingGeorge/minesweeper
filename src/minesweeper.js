@@ -16,23 +16,28 @@ const generateBombBoard = (rows, cols, bombs) => {
         let row = [];
         for (let j = 0; j < cols < 9; j++) {
             row.push(null); 
+        }  
+        board.push(row);      
+    }
+    return board;
+};
+    let numberOfBombsPlaced = 0;
             while (numberOfBombsPlaced < bombs) {
                 let randomRowIndex = Math.floor(Math.random(Math.floor(rows)));
                 return randomRowIndex;
-                let randomcolumnIndex = Math.floor(Math.random(Math.floor(cols)));
+                let randomColumnIndex = Math.floor(Math.random(Math.floor(cols)));
                 return randomRowIndex;
                 board[randomRowIndex][randomColumnIndex] = 'B';
                 numberOfBombsPlaced++;
                 /* The code in your while loop has the potential to place bombs on top of already existing bombs. This will be fixed when you learn about control flow.*/
-            }
-        } 
-        board.push(row);       
-    }
+        
+            board.push(row); 
+        }
+              
+    
     return board;
-    let numberOfBombsPlaced = 0;
-};
+
 
 const printBoard = board => {
     console.log(board.map(row => row.join(' | ')).join('\n'));      
-};
-
+}
